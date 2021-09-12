@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
-export class Books extends Component {
+ class Books extends React.Component {
 
     constructor(props) {
         super(props);
@@ -11,6 +11,9 @@ export class Books extends Component {
         }
 
     }
+
+
+    
     componentDidMount = () => {
         axios.get(`${process.env.REACT_APP_API_URL}/books`).then((bestBooksRes) => {
 
@@ -29,15 +32,15 @@ export class Books extends Component {
                                     <>
                                         <Card style={{ width: '18rem' }}>
                                             <Card.Body>
-                                                <Card.Title>{book.book_title}</Card.Title>
+                                                <Card.Title>{book.title}</Card.Title>
                                                 <Card.Text>
-                                                    {book.book_description}
+                                                    {book.description}
                                                 </Card.Text>
                                                 <Card.Text>
-                                                    {book.book_status}
+                                                    {book.status}
                                                 </Card.Text>
                                                 <Card.Text>
-                                                    {book.book_email}
+                                                    {book.email}
                                                 </Card.Text>
                                             </Card.Body>
                                         </Card>

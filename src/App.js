@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/Header';
 import BestBooks from './component/BestBooks';
 import Profile from './component/Profile';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// }
+//  from "react-router-dom";
+// import reactDom from 'react-dom';
 
-export class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <Router>
+        {/* <Router>
           <Switch>
             <Route exact path="/">
               <BestBooks />
@@ -24,9 +26,9 @@ export class App extends Component {
               <Profile />
             </Route>
           </Switch>
-        </Router>
+        </Router> */}
         <BestBooks />
-        <Profile />
+        
       </div>
     )
   }
